@@ -26,7 +26,7 @@ $mensagem = '';
 }
 
 elseif(isset($_GET['valor']) && !isset($_GET['coin'])){
-$mensagem = '<div class="alert alert-danger">Ação não executada!</div>';
+$mensagem = '<div class="alert alert-danger">Selecione a moeda!</div>';
 }
 
 
