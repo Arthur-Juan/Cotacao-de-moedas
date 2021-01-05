@@ -1,0 +1,9 @@
+{
+    "description": "Cotação de moedas",
+    "name":"cotacao/moedas",
+    "autoload":{
+        "psr-4": {
+            "App\\":"app/"
+        }
+    }
+}
