@@ -110,8 +110,8 @@ class Moeda{
         $libraReal[1] = floatval($this->valor) * $cotacoes['GBP'];
     }
 
-    if(array_key_exists('GBP', $cotacoes)){
-        $ieneReal[1] = floatval($this->valor) * $cotacoes['GBP'];
+    if(array_key_exists('JPY', $cotacoes)){
+        $ieneReal[1] = floatval($this->valor) * $cotacoes['JPY'];
     }
 
         
