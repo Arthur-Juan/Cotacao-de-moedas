@@ -83,13 +83,15 @@ class Moeda{
      */
     public function calculate($cotacoes){
 
-   
+    //ADICIONAR NOVAS MOEDAS AQUI
      $dolReal= array("DOL", null);
      $eurReal= array("EUR", null);
      $btcReal= array("BTC", null);
+     $libraReal = array("GBP", null);
+     $ieneReal = array("JPY", null);
     $resultado ='';
     
-    
+        
     if(array_key_exists('EUR', $cotacoes)){
         $eurReal[1] = floatval($this->valor) * $cotacoes['EUR'];
     }
@@ -104,14 +106,24 @@ class Moeda{
         $btcReal[1] = floatval($this->valor) * $cotacoes['BTC'];
     }
     
+    if(array_key_exists('GBP', $cotacoes)){
+        $libraReal[1] = floatval($this->valor) * $cotacoes['GBP'];
+    }
 
-        $aux = array($dolReal, $eurReal, $btcReal);
+    if(array_key_exists('GBP', $cotacoes)){
+        $ieneReal[1] = floatval($this->valor) * $cotacoes['GBP'];
+    }
+
+        
+        //ADICIONAR var da moeda aqui
+        $aux = array($dolReal, $eurReal, $btcReal, $libraReal, $ieneReal);
         foreach($aux as $key){
             if($key[1] != null){
+            
             $resultado .= 'R$ '. number_format($this->valor, 2, ',', '.') .' : '. $key[0] .' '. number_format($key[1], 2, ',', '.'). "<br>  ";
             }
         }
-
+        
         $this->resultado = $resultado;
     }
    

@@ -19,7 +19,7 @@ $mensagem = '';
     $obMoeda->setValor($_GET['valor']);
     $obMoeda->getCotacao($obServer->xhr($obServer->makeUrl($obMoeda->getMoedas())));
     $obMoeda->calculate($obMoeda->getCotacoes());  
-     
+
     $resultado = ($obMoeda->getResultado()); 
     
     

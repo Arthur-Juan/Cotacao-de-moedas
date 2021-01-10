@@ -1,15 +1,25 @@
 
 <div class= 'jumbotron bg-light'>
 
+        <!--ADICIONAR NOVAS MOEDAS AQUI COM O CÓDIGO DA URL-->
 
         <div class='rows-1 text-dark'>
         <form required action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="GET"><!--FORM-->
         <label class='btn btn-info'><!--GET MOEDAS--> 
-        <input type='checkbox' name='coin[]' value='USD-BRL'>  Dolar
+        <input type='checkbox' name='coin[]' value='USD-BRL'>  Dolar Americano
         </label>
         <label class='btn btn-info'>  
         <input type='checkbox' name='coin[]' value='EUR-BRL'>  Euro
         </label>
+        <label class='btn btn-info'><!--GET MOEDAS--> 
+        <input type='checkbox' name='coin[]' value='GBP-BRL'>  Libra Esterlina
+        </label>
+
+        </label>
+        <label class='btn btn-info'><!--GET MOEDAS--> 
+        <input type='checkbox' name='coin[]' value='JPY-BRL'>  Iene Japonês
+        </label>
+            
             <label class='btn btn-info'>  
             <input type='checkbox' name='coin[]' value='BTC-BRL'>  Bitcoin
             </label><!--GET MOEDAS-->
